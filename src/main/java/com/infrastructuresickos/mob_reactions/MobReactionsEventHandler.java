@@ -31,7 +31,7 @@ public class MobReactionsEventHandler {
     @SubscribeEvent
     public void onLivingHurt(LivingHurtEvent event) {
         LivingEntity entity = event.getEntity();
-        if (!(entity.level() instanceof Level level)) return;
+        Level level = entity.level();
         if (level.isClientSide()) return;
 
         BlockPos pos = entity.blockPosition();
@@ -50,7 +50,7 @@ public class MobReactionsEventHandler {
     @SubscribeEvent
     public void onLivingDeath(LivingDeathEvent event) {
         LivingEntity entity = event.getEntity();
-        if (!(entity.level() instanceof Level level)) return;
+        Level level = entity.level();
         if (level.isClientSide()) return;
 
         double roll = RANDOM.nextDouble();
