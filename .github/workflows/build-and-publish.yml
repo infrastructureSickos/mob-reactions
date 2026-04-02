@@ -107,7 +107,7 @@ jobs:
           curl -sf -X PATCH \
             -H "Authorization: ${MODRINTH_API_TOKEN}" \
             -H "Content-Type: application/json" \
-            -d '{"categories": ['mobs']}' \
+            -d '{"categories": ["mobs"]}' \
             "https://api.modrinth.com/v2/project/96jBo2VZ"
 
   update-modpack:
