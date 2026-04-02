@@ -1,0 +1,5 @@
+ext {
+    modId = 'mob_reactions'
+    modName = 'MobReactions'
+    modrinthId = '96jBo2VZ'
+}
